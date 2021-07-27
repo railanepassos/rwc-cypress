@@ -22,8 +22,8 @@ steps:
   displayName: 'run tests on electron'
   continueOnError: true
 
-- script: npm run cy:run:chromeSpec
-  displayName: 'run spec in chrome'
+- script: npm run cy:run:firefox
+  displayName: 'run spec in firefox'
   continueOnError: true
 
 - task: PublishTestResults@2
