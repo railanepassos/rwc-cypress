@@ -25,3 +25,11 @@ steps:
 - script: npm run cy:run:chromeSpec
   displayName: 'run spec in chrome'
   continueOnError: true
+
+- task: PublishTestResults@2
+  displayName: 'Show test results'
+  inputs:
+    testResultsFiles: '**/junit-*.xml'
+    mergeTestResults: true
+    testRunTitle: 'Agilizei Nivel 2'
+  continueOnError: true
